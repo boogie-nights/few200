@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'few200';
+  title = 'Front End Web 200';
+
+  makeUpper() {
+    this.title = this.title.toUpperCase();
+  }
 }
