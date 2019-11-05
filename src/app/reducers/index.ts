@@ -28,6 +28,10 @@ const selectCounterBranch = (state: ApplicationState) => state.counter;
 export const selectCurrentCount = createSelector(selectCounterBranch, b => b.current);
 export const selectCountingBy = createSelector(selectCounterBranch, b => b.by);
 
+export const selectFizz = createSelector(selectCurrentCount, count => (count % 3) === 0);
+export const selectBuzz = createSelector(selectCurrentCount, count => (count % 5) === 0);
+export const selectFizzBuzz = createSelector(selectFizz, selectBuzz, (fizz, buzz) => (fizz && buzz));
+
 export const selectDecrememntDisabled = createSelector(
   selectCurrentCount,
   selectCountingBy,
