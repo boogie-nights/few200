@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { ApplicationState } from './reducers';
+import { applicationStart } from './actions/app.actions';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +11,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Front End Web 200';
 
-  makeUpper() {
-    this.title = this.title.toUpperCase();
+  constructor(store: Store<ApplicationState>) {
+    store.dispatch(applicationStart());
   }
 }
