@@ -1,0 +1,28 @@
+<div>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input name="title"
+           #title
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text"
+           #author
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="format">Format</label>
+    <select class="form-control"
+            name="format"
+            #format>
+      <option value="Hardcover">Hardcover</option>
+      <option value="Paperback">Paperback</option>
+      <option value="E-book">E-book</option>
+    </select>
+  </div>
+  <input type="button"
+         class="btn btn-success"
+         (click)="add(title, author, format)"
+         value="Add Book">
+</div>
