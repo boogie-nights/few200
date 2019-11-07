@@ -18,6 +18,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { MoviesModule } from './features/movies/movies.module';
+import { BooksModule } from './features/books/books.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MoviesModule } from './features/movies/movies.module';
   ],
   imports: [
     MoviesModule,
+    BooksModule,
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers),
